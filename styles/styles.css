@@ -34,18 +34,15 @@ main {
     display: flex;
     flex-direction: column;
     flex: 8;
-    margin-top: 128px;
+    margin-top: 120px;
     justify-content: center;
     align-items: center;
     background-color: #e8ecf3;
 }
 
 .left-panel textarea {
-    height: 100%;
-    min-height: 700px;
-    width: 500px;
-    background-color: #007bff;
-    border: #007bff;
+    min-height: 100%;
+    width: 100%;
 }
 
 .right-panel {
@@ -63,6 +60,7 @@ main {
 .right-panel textarea {
     width: 100%;
     min-width: 300px;
+    height: 100%;
 }
 .buttons {
     margin-top: 16px;
