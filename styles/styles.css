@@ -34,14 +34,14 @@ main {
     display: flex;
     flex-direction: column;
     flex: 8;
-    margin-top: 120px;
-    justify-content: center;
+    margin-top: 110px;
+    justify-content: space-between;
     align-items: center;
     background-color: #e8ecf3;
 }
 
 .left-panel textarea {
-    min-height: 100%;
+    min-height: 75%;
     width: 100%;
 }
 
@@ -59,12 +59,12 @@ main {
 
 .right-panel textarea {
     width: 100%;
-    min-width: 300px;
+    min-width: 350px;
     height: 100%;
 }
 .buttons {
     margin-top: 16px;
-    margin-bottom: 72px;
+    margin-bottom: 32px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -73,7 +73,9 @@ main {
 button {
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 24px;
+    height: 57px;
+    width: 228px;
     font-size: 1em;
     cursor: pointer;
 }
