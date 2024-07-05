@@ -8,12 +8,24 @@
     <title>Encriptador de texto</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Encriptador y Desencriptador de Texto</h1>
+    </header>
     <main>
-        <div>
-
-        </div>
+        <section>
+            <textarea id="inputText" placeholder="Ingresa tu texto aquí..."></textarea>
+            <div class="buttons">
+                <button onclick="encriptar()">Encriptar</button>
+                <button onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section>
+            <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
