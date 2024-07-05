@@ -12,14 +12,17 @@
         <h1>Encriptador y Desencriptador de Texto</h1>
     </header>
     <main>
-        <section>
+        <section class="left-panel">
             <textarea id="inputText" placeholder="Ingresa tu texto aquí..."></textarea>
+            <div class="info">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
             <div class="buttons">
                 <button onclick="encriptar()">Encriptar</button>
                 <button onclick="desencriptar()">Desencriptar</button>
             </div>
         </section>
-        <section>
+        <section class="right-panel">
             <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
         </section>
     </main>
