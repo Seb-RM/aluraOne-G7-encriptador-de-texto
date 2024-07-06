@@ -25,7 +25,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: stretch; 
-    width: 85%;
+    width: 80%;
     height: 100%;
     gap: 50px;
 }
@@ -104,9 +104,10 @@ button {
     border: none;
     border-radius: 24px;
     height: 57px;
-    width: 228px;
-    font-size: 1rem;
+    width: 328px;
+    font-size: 1.2rem;
     font-family: Inter;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -128,3 +129,40 @@ button:first-of-type:hover {
 button:last-of-type:hover {
     background-color: #E9ECF8;
 }
+
+.alert {
+    padding: 20px;
+    background-color: #757FB2;
+    color: #F3F5FC;
+    margin-bottom: 15px;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.alert p {
+    margin: 0;
+    padding: 0;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: #F3F5FC;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #343A40;
+}
+

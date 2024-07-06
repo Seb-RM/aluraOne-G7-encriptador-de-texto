@@ -30,7 +30,7 @@
                     </clipPath>
                     </defs>
                     </svg>
-                    Solo letras minúsculas y sin acentos</p>
+                    Solo letras minúsculas y sin acentos.</p>
             </div>
 
             <div class="buttons">
@@ -40,12 +40,16 @@
         </section>
         <section class="right-panel">
             <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
-            <button onclick="desencriptar()">Copiar</button>
+            <button onclick="copiarTexto()">Copiar</button>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+    <div id="customAlert" class="alert" style="display: none;">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <p id="alertText">Mensaje de alerta.</p>
+    </div>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
