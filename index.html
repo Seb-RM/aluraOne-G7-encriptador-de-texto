@@ -39,8 +39,11 @@
             </div>
         </section>
         <section class="right-panel">
-            <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
-            <button onclick="copiarTexto()">Copiar</button>
+            <div id="noTextMessage" >No se ha encriptado ni desencriptado ningún texto.</div>
+            <div id="outputText" class="outputTextClass" style="display: none;">
+                <textarea id="resultingText" placeholder="Resultado..." readonly ></textarea>
+                <button onclick="copiarTexto()">Copiar</button>
+            </div>
         </section>
     </main>
     <footer>
