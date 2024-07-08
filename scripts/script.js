@@ -61,7 +61,7 @@ function showOutputText() {
 
 function copiarTexto() {
   // Obtiene el textarea del output
-  let outputText = document.getElementById("outputText").value;
+  let outputText = document.getElementById("resultingText").value;
 
   // Usa la API del Portapapeles para copiar el texto
   navigator.clipboard.writeText(outputText).then(function () {
