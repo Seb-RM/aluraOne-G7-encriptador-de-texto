@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Fira+Code:wght@300..700&family=Inter:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: #F3F5FC;
@@ -70,8 +72,11 @@ textarea::placeholder {
     box-sizing: border-box;
 }
 
-.noTextMessage {
-    gap: 5px;
+#noTextMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
 }
 
 .outputTextClass {
@@ -87,13 +92,30 @@ textarea::placeholder {
     resize: none;
     outline: none;
     padding: 5px;
-    font-family: Inter;
+    font-family: Fira Code;
     font-size: 1.5rem;
     color: #495057;
 }
 
 .right-panel button {
     margin-top: 5px;
+}
+
+#noTextMessage {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: Source Code Pro;
+}
+
+#noTextMessage img {
+    background-color: #F3F5FC;
+    border-radius: 50px;
+}
+
+#noTextMessage p:first-of-type {
+    font-weight: 700;
 }
 .buttons {
     margin-top: 16px;
@@ -105,7 +127,7 @@ textarea::placeholder {
 
 .info {
     align-self: self-start;
-    font-family: Inter;
+    font-family: Source Code Pro;
     font-size: 1rem;
     color: #495057;
 }
@@ -117,9 +139,10 @@ button {
     height: 57px;
     width: 328px;
     font-size: 1.2rem;
-    font-family: Inter;
+    font-family: Encode Sans;
     font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:first-of-type {
@@ -154,6 +177,7 @@ button:last-of-type:hover {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: Inter;
     font-size: 1.2rem;
 }
 
