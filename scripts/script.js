@@ -3,6 +3,9 @@ function showAlert(message) {
     const alertText = document.getElementById("alertText");
     alertText.textContent = message;
     alertBox.style.display = "block";
+    setTimeout(() => {
+      alertBox.style.display = "none";
+    }, 3000);
 }
 
 function encriptar() {
@@ -39,15 +42,11 @@ function desencriptar() {
 
 function copiarTexto() {
   // Obtiene el textarea del output
-    let outputText = document.getElementById("outputText");
-
-  // Selecciona el texto dentro del textarea
-outputText.select();
-  outputText.setSelectionRange(0, 99999); // Para dispositivos móviles
-
-  // Copia el texto al portapapeles
-    document.execCommand("copy");
-
-  // Muestra una alerta personalizada para indicar que el texto fue copiado
+  let outputText = document.getElementById("outputText").value;
+  
+  // Usa la API del Portapapeles para copiar el texto
+  navigator.clipboard.writeText(outputText).then(function () {
+    // Muestra una alerta personalizada para indicar que el texto fue copiado
     showAlert("Texto copiado al portapapeles.");
+  });
 }
