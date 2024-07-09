@@ -29,7 +29,7 @@ function encriptar() {
       .replace(/o/g, "ober")
       .replace(/u/g, "ufat");
 
-  document.getElementById("resultingText").value = outputText;
+  document.getElementById("resultingText").innerHTML = outputText;
   showOutputText();
 }
 
@@ -48,7 +48,7 @@ function desencriptar() {
       .replace(/ober/g, "o")
       .replace(/ufat/g, "u");
 
-  document.getElementById("resultingText").value = outputText;
+  document.getElementById("resultingText").innerHTML = outputText;
   showOutputText();
 }
 
@@ -66,7 +66,7 @@ function showOutputText() {
 
 // Función que copia el texto del resultado al portapapeles
 function copiarTexto() {
-    const outputText = document.getElementById("resultingText").value;
+    const outputText = document.getElementById("resultingText").innerHTML;
     navigator.clipboard.writeText(outputText).then(() => {
         showAlert("Texto copiado al portapapeles.");
     });

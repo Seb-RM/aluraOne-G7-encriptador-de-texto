@@ -110,6 +110,7 @@ textarea::placeholder {
     flex: 2;
     padding: 32px;
     min-width: 384px;
+    max-height: 650px;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
@@ -140,23 +141,24 @@ textarea::placeholder {
 .outputTextClass {
     width: 100%;
     height: 100%;
-}
-
-.right-panel textarea {
-    flex: 2;
-    width: 100%;
-    height: 89.5%;
-    border: 0 none;
-    resize: none;
-    outline: none;
-    padding: 5px;
-    font-family: var(--font-monospace);
-    font-size: 1.5rem;
-    color: var(--color-secondary);
+    flex-direction: column;
 }
 
 .right-panel button {
     margin-top: 5px;
+}
+
+#resultingText{
+    width: 100%;
+    flex: 2;
+    height: 89.5%;
+    padding: 5px;
+    font-family: var(--font-monospace);
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    text-wrap: balance;
+    word-wrap:break-word;
+    overflow-y: auto;
 }
 
 /* Botones */
@@ -256,6 +258,7 @@ footer {
     body {
         margin: 0;
         padding: 0;
+        justify-content: space-between;
     }
     /* Encabezado */
     header {
@@ -351,7 +354,7 @@ footer {
         border-radius: 32px;
     }
 
-    .right-panel textarea {
+    #resultingText{
         height: auto;
         min-height: auto;
         flex-grow: 1; 
@@ -360,8 +363,9 @@ footer {
         outline: none;
         width: 100%;
         border-radius: 32px;
-        resize: vertical;
-        overflow: auto;
+        text-wrap: balance;
+        word-wrap:break-word;
+        overflow-y: auto;
     }
 
     .right-panel button {
@@ -397,6 +401,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         gap: 15px;
     }
 
@@ -430,10 +435,11 @@ footer {
         left: 0;
         width: auto;
         left: 10px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        padding: 0 ;
         top: 10px;
         line-height: 1;
-        text-align: center;
+        
     }
 
     /* Sección Principal*/
@@ -474,6 +480,7 @@ footer {
     .right-panel {
         min-width: auto;
         width: 100%;
+        max-height: auto;
         margin-top: 5px;
         flex-direction: column;
         align-items: center;
@@ -506,6 +513,7 @@ footer {
         min-width: auto;
         min-height: auto;
         height: auto;
+        max-width: auto;
         display: flex;
         border-radius: 25px;
         flex-direction: column;
@@ -540,22 +548,16 @@ footer {
         border-radius: 32px;
     }
 
-    .right-panel textarea {
-        height: auto;
-        min-height: auto;
-        flex-grow: 1; 
-        border: 0 none;
-        resize: none;
-        outline: none;
-        width: 100%;
-        border-radius: 32px;
-        resize: vertical;
-        overflow-y: auto;
-        word-wrap:break-word
-    }
-
     .right-panel button {
         margin: 0;
+    }
+
+    #resultingText{
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        overflow-y: auto;
+        word-wrap:break-word
     }
 
     /* Footer */
