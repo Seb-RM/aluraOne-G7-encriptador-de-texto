@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encriptador y Desencriptador de Texto">
+    <meta name="author" content="Sebastian Rodríguez M.">
+    <!-- Favicon -->
     <link rel="icon" type="image/vnd.icon" href="./assets/archivo-encriptado.ico">
+    <!-- CSS Resets -->
     <link rel="stylesheet" href="./styles/reset.css">
+    <!-- Estilos Principales -->
     <link rel="stylesheet" href="./styles/styles.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <title>Encriptador de texto</title>
 </head>
 <body>
+    <!-- Encabezado con logo y titulo-->
     <header>
         <img src="./assets/logo-header.svg" alt="letra A">
-        <!-- <h1>Encriptador y Desencriptador de Texto</h1> -->
+        <h1>Encriptador y Desencriptador de Texto</h1>
     </header>
+    <!-- Sección Main -->
     <main>
+        <!-- Panel Izquierdo para ingreso de información/ botones encriptar-desencriptar -->
         <section class="left-panel">
             <textarea id="inputText" placeholder="Ingresa tu texto aquí..."></textarea>
             <div class="info">
@@ -25,12 +29,12 @@
                     <img src="./assets/signo.svg" alt="Signo de advertencia">
                     Solo letras minúsculas y sin acentos.</p>
             </div>
-
             <div class="buttons">
-                <button onclick="encriptar()">Encriptar</button>
-                <button onclick="desencriptar()">Desencriptar</button>
+                <button onclick="encriptar()" aria-label="Encriptar texto">Encriptar</button>
+                <button onclick="desencriptar()" aria-label="Desencriptar texto">Desencriptar</button>
             </div>
         </section>
+        <!-- Panel Derecho muestra los resultados/ botón copiar -->
         <section class="right-panel">
             <div id="noTextMessage" >
                 <img src="./assets/busqueda.svg" alt="Imagen Ilustrativa">
@@ -39,17 +43,20 @@
             </div>
             <div id="outputText" class="outputTextClass" style="display: none;">
                 <textarea id="resultingText" placeholder="Resultado..." readonly ></textarea>
-                <button onclick="copiarTexto()" class="animate__bounce">Copiar</button>
+                <button onclick="copiarTexto()" aria-label="Copiar texto">Copiar</button>
             </div>
         </section>
     </main>
+    <!-- Pie de pagina -->
     <footer>
         <p>&copy; 2024 Sebastian Rodríguez M.</p>
     </footer>
+    <!-- Alerta personalizada para notificaciones -->
     <div id="customAlert" class="alert" style="display: none;">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         <p id="alertText">Mensaje de alerta.</p>
     </div>
+    <!-- JavaScript Principal -->
     <script src="./scripts/script.js"></script>
 </body>
 </html>

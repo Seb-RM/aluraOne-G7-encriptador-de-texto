@@ -1,4 +1,27 @@
+/* Fuentes Importadas */
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Fira+Code:wght@300..700&family=Inter:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Headland+One&display=swap');
+
+/* Variables Css */
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Headland One', serif;
+    --font-monospace: 'Fira Code', monospace;
+    --font-code: 'Source Code Pro', monospace;
+    --font-encode: 'Encode Sans', sans-serif;
+    --font-expletus: 'Expletus Sans', serif;
+
+    --color-background: #F3F5FC;
+    --color-primary: #007bff;
+    --color-secondary: #495057;
+    --color-highlight: #0A3871;
+    --color-highlight-light: #356EA9;
+    --color-highlight-bg: #E9ECF8;
+    --color-alert: #757FB2;
+    --color-alert-text: #F3F5FC;
+    --color-footer-bg: #052051;
+    --color-footer-text: #EFF1FA;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -14,11 +37,20 @@ header {
     position: fixed;
     top: 40px;
     left: 40px;
-    /* background-color: #007bff; */
-    color: white;
+    font-size: 2.4rem ;
+    font-weight: 500;
+    font-family: Headland One;
+    color: #007bff;
     padding: 10px 20px;
     border-radius: 10px;
     z-index: 1000;
+}
+
+header h1 {
+    position: absolute;
+    width: 800px;
+    top: 15px;
+    left: 200px;
 }
 
 main {
@@ -207,6 +239,7 @@ footer {
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
+    font-family: Expletus Sans;
     color: #EFF1FA;
     background-color: #052051;
 }
