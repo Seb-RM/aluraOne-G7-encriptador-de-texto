@@ -23,9 +23,10 @@
     --color-footer-text: #EFF1FA;
 }
 
+/* Estilos Globales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F3F5FC;
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -33,14 +34,16 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+/* Encabezado */
 header {
     position: fixed;
     top: 40px;
     left: 40px;
     font-size: 2.4rem ;
     font-weight: 500;
-    font-family: Headland One;
-    color: #007bff;
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
     padding: 10px 20px;
     border-radius: 10px;
     z-index: 1000;
@@ -53,6 +56,7 @@ header h1 {
     left: 200px;
 }
 
+/* Sección Principal */
 main {
     align-self: self-end;
     margin: 40px 40px 40px 240px;
@@ -64,6 +68,7 @@ main {
     gap: 50px;
 }
 
+/* Panel Izquierdo */
 .left-panel {
     display: flex;
     flex-direction: column;
@@ -73,23 +78,32 @@ main {
     align-items: center;
 }
 
-textarea::placeholder {
-    color: #0A3871;
-}
-
 .left-panel textarea {
     min-height: 75%;
     width: 100%;
-    border: 0 none;
+    border: none;
     resize: none;
     outline: none;
     padding: 10px;
     background-color: transparent;
-    font-family: Inter;
+    font-family: var(--font-primary);
     font-size: 2rem;
-    color: #0A3871;
+    color: var(--color-highlight);
 }
 
+textarea::placeholder {
+    color: var(--color-highlight);
+}
+
+/* Texto Informativo */
+.info {
+    align-self: flex-start;
+    font-family: var(--font-code);
+    font-size: 1rem;
+    color: var(--color-secondary);
+}
+
+/* Panel Derecho */
 .right-panel {
     display: flex;
     flex-direction: column;
@@ -109,6 +123,18 @@ textarea::placeholder {
     flex-direction: column;
     align-items: stretch;
     gap: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: var(--font-code);
+}
+
+#noTextMessage img {
+    background-color: var(--color-background);
+    border-radius: 50px;
+}
+
+#noTextMessage p:first-of-type {
+    font-weight: 700;
 }
 
 .outputTextClass {
@@ -124,44 +150,22 @@ textarea::placeholder {
     resize: none;
     outline: none;
     padding: 5px;
-    font-family: Fira Code;
+    font-family: var(--font-monospace);
     font-size: 1.5rem;
-    color: #495057;
+    color: var(--color-secondary);
 }
 
 .right-panel button {
     margin-top: 5px;
 }
 
-#noTextMessage {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2rem;
-    text-align: center;
-    font-family: Source Code Pro;
-}
-
-#noTextMessage img {
-    background-color: #F3F5FC;
-    border-radius: 50px;
-}
-
-#noTextMessage p:first-of-type {
-    font-weight: 700;
-}
+/* Botones */
 .buttons {
     margin-top: 16px;
     margin-bottom: 32px;
     display: flex;
     justify-content: center;
     gap: 50px;
-}
-
-.info {
-    align-self: self-start;
-    font-family: Source Code Pro;
-    font-size: 1rem;
-    color: #495057;
 }
 
 button {
@@ -171,35 +175,36 @@ button {
     height: 57px;
     width: 328px;
     font-size: 1.2rem;
-    font-family: Encode Sans;
+    font-family: var(--font-encode);
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:first-of-type {
-    background-color: #0A3871;
+    background-color: var(--color-highlight);
     color: #ffffff;
 }
 
 button:last-of-type {
     background-color: transparent;
-    color: #0A3871;
-    border: 2px solid #0A3871;
+    color: var(--color-highlight);
+    border: 2px solid var(--color-highlight);
 }
 
 button:first-of-type:hover {
-    background-color: #356EA9;
+    background-color: var(--color-highlight-light);
 }
 
 button:last-of-type:hover {
-    background-color: #E9ECF8;
+    background-color: var(--color-highlight-bg);
 }
 
+/* Alerta */
 .alert {
     padding: 20px;
-    background-color: #757FB2;
-    color: #F3F5FC;
+    background-color: var(--color-alert);
+    color: var(--color-alert-text);
     margin-bottom: 15px;
     position: fixed;
     top: 100px;
@@ -209,7 +214,7 @@ button:last-of-type:hover {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: Inter;
+    font-family: var(--font-primary);
     font-size: 1.2rem;
 }
 
@@ -220,7 +225,7 @@ button:last-of-type:hover {
 
 .closebtn {
     margin-left: 15px;
-    color: #F3F5FC;
+    color: var(--color-alert-text);
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -233,13 +238,14 @@ button:last-of-type:hover {
     color: #343A40;
 }
 
+/* Footer */
 footer {
     width: 100%;
     padding: 15px;
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
-    font-family: Expletus Sans;
-    color: #EFF1FA;
-    background-color: #052051;
+    font-family: var(--font-expletus);
+    color: var(--color-footer-text);
+    background-color: var(--color-footer-bg);
 }
