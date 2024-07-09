@@ -54,14 +54,14 @@ function desencriptar() {
 
 // Muestra un mensaje de que no hay texto para encriptar
 function showNoTextMessage() {
-  document.getElementById("noTextMessage").style.display = "block";
+  document.getElementById("noTextMessage").style.display = "flex";
   document.getElementById("outputText").style.display = "none";
 }
 
 // Muestra el resultado del texto encriptado
 function showOutputText() {
   document.getElementById("noTextMessage").style.display = "none";
-  document.getElementById("outputText").style.display = "block";
+  document.getElementById("outputText").style.display = "flex";
 }
 
 // Función que copia el texto del resultado al portapapeles

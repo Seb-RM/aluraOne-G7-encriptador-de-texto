@@ -249,3 +249,189 @@ footer {
     color: var(--color-footer-text);
     background-color: var(--color-footer-bg);
 }
+
+/* Media Queries para Tablets */
+@media (min-width: 768px) and (max-width: 1300px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    /* Encabezado */
+    header {
+        margin-top: 30px;
+        position: relative;
+        top: 20px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        padding: 10px 20px;
+
+    }
+
+    #logo {
+        position: relative;
+        float: left;
+        margin-right: 5px;
+        width: 50px;
+        height: 30px;
+        top: 20px;
+    }
+
+    header h1 {
+        position: relative;
+        top: 15px;
+        width: auto;
+        left: 20px;
+        top: 10px;
+        line-height: 1.2;
+        text-align: center;
+    }
+    
+    /* Sección Principal*/
+    main {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    /* Panel Izquierdo*/
+    .left-panel {
+        width: 100%;
+    }
+
+    /* Botones */
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 295px;
+    }
+
+    /* Panel derecho*/
+    .right-panel {
+        padding: 0;
+        min-width: auto;
+        min-height: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #noTextMessage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.4rem;
+    }
+
+    #noTextMessage p {
+        padding: 0 5px;
+        text-wrap: balance;
+    }
+    
+    #noTextMessage img {
+        display: none;
+    }
+
+    #outputText {
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+        gap: 32PX;
+        padding: 32px;
+        flex-grow: 1; 
+        height: auto;
+        border-radius: 32px;
+    }
+
+
+    .right-panel textarea {
+        height: auto;
+        min-height: auto;
+        flex-grow: 1; 
+        border: 0 none;
+        resize: none;
+        outline: none;
+        width: 100%;
+        border-radius: 32px;
+        resize: vertical;
+        overflow: auto;
+    }
+
+    .right-panel button {
+        margin: 0;
+    }
+
+    /* Alerta */
+    .alert {
+        padding: 20px;
+        margin-bottom: 15px;
+        position: fixed;
+        top: 200px;
+        left: 50%;
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 15px;
+    }
+}
+
+/* Media Queries para Teléfonos Móviles
+@media (max-width: 375px) {
+    header {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+    }
+
+    header h1 {
+        width: auto;
+        left: 10px;
+        font-size: 1.2rem;
+        top: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .left-panel {
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .right-panel {
+        min-width: auto;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    textarea {
+        font-size: 1.2rem;
+    }
+
+    .info {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+} */
