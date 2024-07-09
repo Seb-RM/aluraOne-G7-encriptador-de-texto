@@ -252,7 +252,7 @@ footer {
 
 /* Media Queries para Tablets */
 @media (min-width: 768px) and (max-width: 1300px) {
-
+    /* Estilos Globales */
     body {
         margin: 0;
         padding: 0;
@@ -351,7 +351,6 @@ footer {
         border-radius: 32px;
     }
 
-
     .right-panel textarea {
         height: auto;
         min-height: auto;
@@ -385,41 +384,82 @@ footer {
     }
 }
 
-/* Media Queries para Teléfonos Móviles
-@media (max-width: 375px) {
+/* Media Queries para Teléfonos Móviles */
+@media (max-width: 767px) {
+    /* Estilos Globales */
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Encabezado */
     header {
+        margin: 10px 0 0 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
         font-size: 1.5rem;
-        padding: 5px 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logo {
+        position: relative;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        float: none;
+        width: 50px;
+        height: 30px;
     }
 
     header h1 {
+        position: relative;
+        top: 0;
+        left: 0;
         width: auto;
         left: 10px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         top: 10px;
+        line-height: 1;
+        text-align: center;
     }
 
+    /* Sección Principal*/
     main {
-        flex-direction: column;
-        margin: 10px;
         width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 0 20px;
+        width: 100%;
+        min-height: auto;
         align-items: center;
+        gap: 20px;
     }
 
+    /* Panel Izquierdo*/
     .left-panel {
         margin-top: 40px;
         width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    .right-panel {
-        min-width: auto;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    button {
-        width: 100%;
-        font-size: 1rem;
+    .left-panel textarea {
+        min-height: 300px;
     }
 
     textarea {
@@ -430,8 +470,98 @@ footer {
         font-size: 0.8rem;
     }
 
+    /* Panel derecho*/
+    .right-panel {
+        min-width: auto;
+        width: 100%;
+        margin-top: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #noTextMessage img {
+        display: none;
+    }
+
+    /* Botones */
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .buttons {
+        width: 100%;
+        margin: 0;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2rem;
+        gap: 10px;
+    }
+
+    /* Panel derecho*/
+    .right-panel {
+        padding: 0;
+        min-width: auto;
+        min-height: auto;
+        height: auto;
+        display: flex;
+        border-radius: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #noTextMessage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    #noTextMessage p {
+        padding: 0 5px;
+        text-wrap: balance;
+    }
+    
+    #noTextMessage img {
+        display: none;
+    }
+
+    #outputText {
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+        gap: 32PX;
+        padding: 25px;
+        flex-grow: 1; 
+        height: auto;
+        border-radius: 32px;
+    }
+
+    .right-panel textarea {
+        height: auto;
+        min-height: auto;
+        flex-grow: 1; 
+        border: 0 none;
+        resize: none;
+        outline: none;
+        width: 100%;
+        border-radius: 32px;
+        resize: vertical;
+        overflow-y: auto;
+        word-wrap:break-word
+    }
+
+    .right-panel button {
+        margin: 0;
+    }
+
+    /* Footer */
     footer {
         font-size: 0.8rem;
         padding: 5px;
+        width: 100%;
     }
-} */
+}
