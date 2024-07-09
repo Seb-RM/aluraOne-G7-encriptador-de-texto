@@ -1,71 +1,73 @@
+// Función que maneja los mensajes de alerta
 function showAlert(message) {
-    const alertBox = document.getElementById("customAlert");
-    const alertText = document.getElementById("alertText");
-    alertText.textContent = message;
-    alertBox.style.display = "block";
-    setTimeout(() => {
-      alertBox.style.display = "none";
-    }, 3000);
+  const alertBox = document.getElementById("customAlert");
+  const alertText = document.getElementById("alertText");
+  alertText.textContent = message;
+  alertBox.style.display = "block";
+  setTimeout(() => {
+    alertBox.style.display = "none";
+  }, 3000);
 }
 
+//Función que encripta el texto ingresado por el usuario
 function encriptar() {
-  let inputText = document.getElementById("inputText").value;
-  let outputText = "";
-  console.log(inputText);
+  const inputText = document.getElementById("inputText").value.trim();
 
-  if (inputText.trim() === "") {
-    showNoTextMessage();
-  } else {
-    if (!/^[a-z\s]+$/.test(inputText)) {
+  if (inputText === "") {
+        showNoTextMessage();
+        return;
+    }
+  if (!/^[a-z\s]+$/.test(inputText)) {
       showAlert("Por favor, ingresa solo letras minúsculas y sin acentos.");
       return;
-    }
-    // Reemplazos según las reglas proporcionadas
-    outputText = inputText.replace(/e/g, "enter")
-                          .replace(/i/g, "imes")
-                          .replace(/a/g, "ai")
-                          .replace(/o/g, "ober")
-                          .replace(/u/g, "ufat");
-
-    document.getElementById("resultingText").value = outputText;
-    showOutputText();
   }
+
+  const outputText = inputText
+      .replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
+
+  document.getElementById("resultingText").value = outputText;
+  showOutputText();
 }
+
+//Función que  desencripta el texto ingresado por el usuario
 function desencriptar() {
-  let inputText = document.getElementById("inputText").value;
-  let outputText = "";
-
-  if (inputText.trim() === "") {
+  const inputText = document.getElementById("inputText").value.trim();
+  if (inputText === "") {
     showNoTextMessage();
-  } else {
-    // Reemplazar las secuencias encriptadas por las letras originales
-    outputText = inputText.replace(/enter/g, "e")
-                          .replace(/imes/g, "i")
-                          .replace(/ai/g, "a")
-                          .replace(/ober/g, "o")
-                          .replace(/ufat/g, "u");
-
-    document.getElementById("resultingText").value = outputText;
-    showOutputText();
+    return;
   }
+
+  const outputText = inputText
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+
+  document.getElementById("resultingText").value = outputText;
+  showOutputText();
 }
+
+// Muestra un mensaje de que no hay texto para encriptar
 function showNoTextMessage() {
   document.getElementById("noTextMessage").style.display = "block";
   document.getElementById("outputText").style.display = "none";
 }
 
+// Muestra el resultado del texto encriptado
 function showOutputText() {
   document.getElementById("noTextMessage").style.display = "none";
   document.getElementById("outputText").style.display = "block";
 }
 
+// Función que copia el texto del resultado al portapapeles
 function copiarTexto() {
-  // Obtiene el textarea del output
-  let outputText = document.getElementById("resultingText").value;
-
-  // Usa la API del Portapapeles para copiar el texto
-  navigator.clipboard.writeText(outputText).then(function () {
-    // Muestra una alerta personalizada para indicar que el texto fue copiado
-    showAlert("Texto copiado al portapapeles.");
-  });
+    const outputText = document.getElementById("resultingText").value;
+    navigator.clipboard.writeText(outputText).then(() => {
+        showAlert("Texto copiado al portapapeles.");
+    });
 }
