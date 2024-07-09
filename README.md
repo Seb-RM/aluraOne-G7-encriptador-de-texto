@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación web sencilla que permite encriptar y desencriptar texto según reglas específicas. La aplicación está desarrollada con HTML, CSS y JavaScript, y es completamente responsive, adaptándose a dispositivos móviles, tablets y escritorios.
 
+<img src=".//screenshots/Captura-desktop.PNG" alt="Vista del Encriptador - Desktop" width="800">
+
 ## Índice
 
 1. [Descripción](#descripción)
@@ -17,6 +19,8 @@ Este proyecto es una aplicación web sencilla que permite encriptar y desencript
 ## Descripción
 
 El propósito de esta aplicación es proporcionar una manera sencilla de encriptar y desencriptar mensajes. Es ideal para demostraciones educativas, ejercicios de codificación, o simplemente para tener una herramienta divertida de codificación de texto.
+
+<img src=".//screenshots/Captura-demostracion.PNG" alt="Demostración de funcionamiento - Desktop" width="800">
 
 ## Características
 
@@ -51,6 +55,9 @@ El propósito de esta aplicación es proporcionar una manera sencilla de encript
 2. Haz clic en el botón "Encriptar" o "Desencriptar" según la acción que desees realizar.
 3. El resultado se mostrará en el área de texto de resultados.
 4. Puedes copiar el resultado al portapapeles haciendo clic en el botón "Copiar".
+5. Recibirás alertas cuando intentes ingresar texto que no cumpla con las reglas especificadas, como texto con letras mayúsculas, acentos o caracteres especiales.
+6. Recibirás un mensaje cada vez que intentes utilizar los botones "Encriptar" o "Desencriptar" sin haber ingresado ningún texto.
+
 
 ## Estructura del Proyecto
 
@@ -59,13 +66,10 @@ El propósito de esta aplicación es proporcionar una manera sencilla de encript
 ```bash
 encriptador-desencriptador/
 ├── assets/
-│ ├── archivo-encriptado.ico
-│ ├── busqueda.svg
-│ ├── logo-header.svg
-│ └── signo.svg
+├── screenshots/
 ├── scripts/
 │ └── script.js
-├── css/
+├── styles/
 │ ├── reset.css
 │ └── styles.css
 ├── index.html
@@ -73,9 +77,11 @@ encriptador-desencriptador/
 
 ```
 
-- `css/styles.css`: Archivo de estilos CSS.
-- `scripts/script.js`: Archivo JavaScript con la lógica de encriptado y desencriptado.
-- `assets/logo-header.svg`: Logo de la aplicación.
+- `assets/: Carpeta en la de se ubican las imágenes utilizadas en el proyecto.
+- `screenshots/: Carpeta donde se ubican las imágenes que se muestran en el README del proyecto.
+- `scripts/script.js`: Archivo JavaScript con la lógica de la funciones encriptado y desencriptado.
+- `styles/reset.css`: Archivo de estilos CSS.
+- `styles/styles.css`: Archivo de estilos CSS.
 - `index.html`: Archivo HTML principal.
 - `README.md`: Documentación del proyecto.
 
